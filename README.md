@@ -11,17 +11,19 @@
 
   <br />
 
-  [![⭐ Star us on GitHub](https://img.shields.io/github/stars/DocuSignLite/docusign-lite?style=social)](https://github.com/DocuSignLite/docusign-lite)
+  [![⭐ Star us on GitHub](https://img.shields.io/github/stars/necu/Docusign-Lite?style=social)](https://github.com/necu/Docusign-Lite)
   
-  Si este proyecto te ha resultado útil, **¡dános una estrella en GitHub!** 🌟  
-  Tu apoyo nos ayuda a seguir mejorando y creando software libre.
+  Si este proyecto te ha resultado útil, **¡dame una estrella en GitHub o invítame a un café!** 🌟☕  
+  Tu apoyo ayuda a seguir mejorando y manteniendo el proyecto.
 
   <br />
 </div>
 
 ---
 
-**DocuSign Lite** es una plataforma Open Source moderna, diseñada para empresas y particulares que necesitan redactar, firmar y generar documentos formales en PDF de forma instantánea. Su arquitectura garantiza que **ningún dato salga de tu ordenador**, procesando tanto el texto como tu firma criptográfica en el navegador (*Client-Side Rendering*).
+**DocuSign Lite** es una plataforma Open Source moderna, diseñada para empresas y particulares que necesitan redactar, firmar y generar documentos formales en PDF de forma instantánea. Su arquitectura garantiza que **ningún dato salga de tu ordenador**, procesando tanto el texto como tu firma criptográfica en el navegador (*Client-Side Rendering*). Además, el proyecto ya queda preparado para despliegue estático en **GitHub Pages**.
+
+> **Descripción sugerida para GitHub:** Generador de documentos laborales 100% client-side con firma manuscrita, exportación a PDF, despliegue en GitHub Pages y enlace opcional de donaciones.
 
 <br/>
 
@@ -60,8 +62,8 @@ Asegúrate de tener instalado [Node.js](https://nodejs.org/es/) (versión 18 o s
 ### 2️⃣ Clonar el Proyecto
 Abre tu terminal y descarga el código fuente directamente desde GitHub:
 ```bash
-git clone https://github.com/DocuSignLite/docusign-lite.git
-cd docusign-lite
+git clone https://github.com/necu/Docusign-Lite.git
+cd Docusign-Lite
 ```
 
 ### 3️⃣ Instalar Dependencias
@@ -78,11 +80,67 @@ npm run dev
 👉 Abre [http://localhost:3000](http://localhost:3000) o la ruta que indique la terminal. Cualquier cambio que hagas en el código se reflejará instantáneamente.
 
 ### 5️⃣ Compilar para Producción (Para Subir a Internet)
-Si quieres subir esta app a tu propio servidor (Vercel, Netlify, AWS, etc.):
+Si quieres subir esta app a tu propio servidor (Vercel, Netlify, AWS, GitHub Pages, etc.):
 ```bash
 npm run build
 ```
 Esto generará una carpeta `dist` con archivos estáticos altamente optimizados, listos para desplegar en cualquier hosting web básico.
+
+---
+
+## 🌐 Despliegue en GitHub Pages
+
+Este repositorio ya incluye una workflow de GitHub Actions para publicar automáticamente el contenido de `dist` en GitHub Pages.
+
+### Enlaces útiles
+
+- Documentación oficial de GitHub Pages: https://docs.github.com/es/pages
+- Publicar con GitHub Actions: https://docs.github.com/es/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+- URL esperada del proyecto: https://necu.github.io/Docusign-Lite/
+
+### Pasos
+
+1. Sube los cambios a la rama `main`.
+2. En GitHub, entra en **Settings > Pages**.
+3. En **Build and deployment**, selecciona **GitHub Actions** como fuente.
+4. Espera a que termine la workflow **Deploy to GitHub Pages** en la pestaña **Actions**.
+5. Abre `https://necu.github.io/Docusign-Lite/`.
+
+### Comprobaciones importantes
+
+- El proyecto ahora compila con rutas relativas, necesarias para funcionar dentro de `https://necu.github.io/Docusign-Lite/`.
+- Si acabas de publicar hace solo 15 minutos, todavía puede ser normal que Pages tarde un poco más en activarse o cachearse.
+- Si la página devuelve 404 o no carga estilos, revisa que la workflow haya terminado correctamente y que GitHub Pages esté configurado con **GitHub Actions**.
+
+---
+
+## ☕ Donaciones / “Invítame a un café”
+
+El proyecto muestra un botón en el menú superior. Por defecto apunta a:
+
+- GitHub Sponsors: `https://github.com/sponsors/necu`
+
+Si prefieres otra plataforma, cambia la variable pública:
+
+```bash
+VITE_DONATION_URL="https://buymeacoffee.com/tuusuario"
+```
+
+### Cómo conseguir tu enlace para cobrar
+
+#### Opción 1: GitHub Sponsors
+
+1. Abre https://github.com/sponsors/accounts
+2. Solicita o activa tu perfil de patrocinio.
+3. Cuando esté aprobado, tu enlace será `https://github.com/sponsors/TU_USUARIO`.
+
+#### Opción 2: Buy Me a Coffee
+
+1. Crea una cuenta en https://buymeacoffee.com/
+2. Configura tu método de cobro.
+3. Tu enlace público será `https://buymeacoffee.com/TU_USUARIO`.
+
+Después solo tendrás que actualizar `VITE_DONATION_URL` antes de desplegar.
 
 ---
 
@@ -142,5 +200,5 @@ Este proyecto está bajo la **Licencia MIT**. Es un software de código abierto 
 <br/>
 <div align="center">
   <p>Desarrollado con ❤️ y código abierto.</p>
-  <p><strong><a href="https://github.com/DocuSignLite/docusign-lite">⭐ No olvides darnos una estrella en GitHub ⭐</a></strong></p>
+  <p><strong><a href="https://github.com/necu/Docusign-Lite">⭐ No olvides dar una estrella en GitHub ⭐</a></strong></p>
 </div>

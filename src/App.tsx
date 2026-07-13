@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Download, FileSignature, Edit3, Briefcase, User, MapPin, Calendar, FileText, ChevronDown, ShieldCheck, Info } from 'lucide-react';
+import { Download, FileSignature, Briefcase, User, MapPin, Calendar, FileText, ChevronDown, ShieldCheck, Coffee } from 'lucide-react';
 import QRCode from 'react-qr-code';
 import SignatureModal from './components/SignatureModal';
 import { documentTemplates, getFieldConfig } from './data/templates';
@@ -8,6 +8,7 @@ import { generatePdfFromPages } from './utils/pdfGenerator';
 import { FormData } from './types';
 
 export default function App() {
+  const donationUrl = import.meta.env.VITE_DONATION_URL?.trim() || 'https://github.com/sponsors/necu';
   const [isSignatureModalOpen, setIsSignatureModalOpen] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [activeSignatureIndex, setActiveSignatureIndex] = useState<number | null>(null);
@@ -144,7 +145,7 @@ export default function App() {
     const parts = text.split(/(\{\{[a-zA-Z]+\}\})/g);
     return parts.map((part, i) => {
       if (part.startsWith('{{') && part.endsWith('}}')) {
-        const field = part.slice(2, -2) as keyof typeof formData;
+        const field = part.slice(2, -2) as Extract<keyof FormData, string>;
         let displayValue = formData[field] || `[${field}]`;
         
         if (['date', 'lastDay', 'startDate', 'endDate'].includes(field) && formData[field]) {
@@ -251,6 +252,17 @@ export default function App() {
             </select>
             <ChevronDown size={14} className="absolute right-2 text-gray-500 pointer-events-none" />
           </div>
+
+          <a
+            href={donationUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden md:inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700 transition-colors hover:bg-amber-100"
+            title={t.supportProject}
+          >
+            <Coffee size={16} />
+            <span>{t.buyCoffee}</span>
+          </a>
           
           <button
             onClick={handleDownloadPdf}
@@ -497,7 +509,7 @@ export default function App() {
                   {/* QR Code Validation */}
                   <div className="flex flex-col items-center opacity-60">
                     <div className="p-1.5 bg-white border border-gray-200 rounded shadow-sm">
-                      <QRCode value="https://github.com/DocuSignLite" size={48} level="L" />
+                      <QRCode value="https://github.com/necu/Docusign-Lite" size={48} level="L" />
                     </div>
                     <span className="text-[7px] mt-1.5 text-gray-400 font-mono tracking-widest uppercase">Verificado</span>
                     <span className="text-[7px] text-gray-400 font-mono mt-0.5">Pág. {pageIndex + 1}/{pages.length}</span>
@@ -663,4 +675,3 @@ export default function App() {
     </div>
   );
 }
-

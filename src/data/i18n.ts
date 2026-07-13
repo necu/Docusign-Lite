@@ -11,6 +11,8 @@ export const uiTranslations: Record<string, any> = {
   'es': {
     mode: 'Documento:',
     language: 'Idioma:',
+    supportProject: 'Apoya el proyecto:',
+    buyCoffee: 'Invítame a un café',
     download: 'Descargar PDF (1 Pág)',
     docInfo: 'Información del documento',
     company: 'Empresa',
@@ -67,6 +69,8 @@ export const uiTranslations: Record<string, any> = {
   'en-GB': {
     mode: 'Document:',
     language: 'Language:',
+    supportProject: 'Support the project:',
+    buyCoffee: 'Buy me a coffee',
     download: 'Download PDF (1 Page)',
     docInfo: 'Document Information',
     company: 'Company',
@@ -123,6 +127,8 @@ export const uiTranslations: Record<string, any> = {
   'en-US': {
     mode: 'Document:',
     language: 'Language:',
+    supportProject: 'Support the project:',
+    buyCoffee: 'Buy me a coffee',
     download: 'Download PDF (1 Page)',
     docInfo: 'Document Information',
     company: 'Company',
@@ -179,6 +185,8 @@ export const uiTranslations: Record<string, any> = {
   'de': {
     mode: 'Dokument:',
     language: 'Sprache:',
+    supportProject: 'Projekt unterstützen:',
+    buyCoffee: 'Einen Kaffee spendieren',
     download: 'PDF herunterladen (1 Seite)',
     docInfo: 'Dokumentinformationen',
     company: 'Unternehmen',
@@ -236,6 +244,8 @@ export const uiTranslations: Record<string, any> = {
   'fr': {
     mode: 'Document:',
     language: 'Langue:',
+    supportProject: 'Soutenir le projet :',
+    buyCoffee: "M'offrir un café",
     download: 'Télécharger PDF (1 Page)',
     docInfo: 'Informations du document',
     company: 'Entreprise',
@@ -292,6 +302,8 @@ export const uiTranslations: Record<string, any> = {
   'zh': {
     mode: '文件类型:',
     language: '语言:',
+    supportProject: '支持项目：',
+    buyCoffee: '请我喝杯咖啡',
     download: '下载 PDF (单页)',
     docInfo: '文件信息',
     company: '公司名称',

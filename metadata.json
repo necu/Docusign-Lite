@@ -1,6 +1,6 @@
 {
   "name": "Baja Voluntaria",
-  "description": "Generador minimalista de documentos de baja voluntaria con firma digital manuscrita y exportación a PDF.",
+  "description": "DocuSign Lite: generador client-side de documentos laborales con firma digital manuscrita, exportación a PDF y soporte para donaciones.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
