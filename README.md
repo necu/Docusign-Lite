@@ -86,6 +86,20 @@ Esto generará una carpeta `dist` con archivos estáticos altamente optimizados,
 
 ---
 
+## 🌐 Despliegue en GitHub Pages
+
+El repositorio incluye un workflow que compila la aplicación con la ruta correcta del
+repositorio y publica la carpeta `dist` en GitHub Pages.
+
+1. En GitHub, abre **Settings** → **Pages**.
+2. En **Build and deployment**, selecciona **GitHub Actions** como fuente.
+3. Haz push a la rama `main` o ejecuta manualmente el workflow **Deploy to GitHub Pages** desde la pestaña **Actions**.
+
+La aplicación quedará disponible en `https://necu.github.io/Docusign-Lite/`. Si se
+configura un dominio personalizado, el workflow adapta la ruta base automáticamente.
+
+---
+
 ## 📖 Cómo usar la Plataforma
 
 Usar **DocuSign Lite** es tan sencillo como rellenar un formulario:

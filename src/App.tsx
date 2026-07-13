@@ -144,7 +144,7 @@ export default function App() {
     const parts = text.split(/(\{\{[a-zA-Z]+\}\})/g);
     return parts.map((part, i) => {
       if (part.startsWith('{{') && part.endsWith('}}')) {
-        const field = part.slice(2, -2) as keyof typeof formData;
+        const field = part.slice(2, -2) as Exclude<keyof FormData, 'signatureImage' | 'extraSignatures'>;
         let displayValue = formData[field] || `[${field}]`;
         
         if (['date', 'lastDay', 'startDate', 'endDate'].includes(field) && formData[field]) {
@@ -663,4 +663,3 @@ export default function App() {
     </div>
   );
 }
-
